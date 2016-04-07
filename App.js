@@ -15,19 +15,13 @@ class App extends React.Component {
     })
   }
 
-  onChange(e) {
-    this.setState({
-      txt: e.target.value
-    })
-  }
-
   render() {
     return (
       <div>
         <h1>Hello World</h1>
         <p>Title : {this.state.txt}</p>
         <p>Cat : {this.state.cat}</p>
-        <input type="text" value={this.state.txt} onChange={this.onChange.bind(this)} />
+        <input type="text" value={this.state.txt} onChange={this.update.bind(this)} />
       </div>
     );
   }
